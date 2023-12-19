@@ -1,6 +1,6 @@
 import unittest
 
-from answers import part_02, part_03, part_04, part_05, part_06, part_07, part_08
+from answers import part_02, part_03, part_04, part_05, part_06, part_07, part_08, part_09
 
 """
 9. Use `itertools.product` to compute the Cartesian product of two lists: [1, 2] and ['a', 'b'].
@@ -59,6 +59,10 @@ class TestAnswers(unittest.TestCase):
 
         self.assertEqual(list(result), [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)])
 
+    def test_part_09(self):
+        result = part_09([1, 2], ['a', 'b'])
+
+        self.assertEqual(list(result), [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')])
 
 if __name__ == '__main__':
     unittest.main()
