@@ -13,3 +13,7 @@ def part_03(source: list[int]):
 
 def part_04():
     return itertools.repeat(5, 5)
+
+
+def part_05(first, second):
+    return itertools.chain(first, second)

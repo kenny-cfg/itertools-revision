@@ -1,10 +1,8 @@
 import unittest
 
-from answers import part_02, part_03, part_04
+from answers import part_02, part_03, part_04, part_05
 
 """
-4. Use `itertools.repeat` to generate a sequence of the number 5 repeated 5 times.
-5. Combine two lists using `itertools.chain`.
 6. Use `itertools.zip_longest` to combine two lists of different lengths, filling missing values with a default value.
 7. Generate all permutations of the characters in the string 'abc'.
 8. Generate all combinations of 2 elements from the list [1, 2, 3, 4].
@@ -34,11 +32,15 @@ class TestAnswers(unittest.TestCase):
 
         self.assertEqual(list(result), [1, 2, 3, 1, 2, 3, 1, 2, 3])
 
-
     def test_part_04(self):
         result = part_04()
 
         self.assertEqual(list(result), [5, 5, 5, 5, 5])
+
+    def test_part_05(self):
+        result = part_05([1, 2, 3], [4, 5, 6])
+
+        self.assertEqual(list(result), [1, 2, 3, 4, 5, 6])
 
 
 
