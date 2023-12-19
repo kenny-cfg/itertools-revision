@@ -9,3 +9,7 @@ def part_02():
 def part_03(source: list[int]):
     cycle = itertools.cycle(source)
     return itertools.islice(cycle, 3 * len(source))
+
+
+def part_04():
+    return itertools.repeat(5, 5)

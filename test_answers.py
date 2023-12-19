@@ -1,9 +1,8 @@
 import unittest
 
-from answers import part_02, part_03
+from answers import part_02, part_03, part_04
 
 """
-3. Create a cycle that repeats the elements of a list three times.
 4. Use `itertools.repeat` to generate a sequence of the number 5 repeated 5 times.
 5. Combine two lists using `itertools.chain`.
 6. Use `itertools.zip_longest` to combine two lists of different lengths, filling missing values with a default value.
@@ -34,6 +33,12 @@ class TestAnswers(unittest.TestCase):
         result = part_03([1, 2, 3])
 
         self.assertEqual(list(result), [1, 2, 3, 1, 2, 3, 1, 2, 3])
+
+
+    def test_part_04(self):
+        result = part_04()
+
+        self.assertEqual(list(result), [5, 5, 5, 5, 5])
 
 
 
