@@ -33,3 +33,9 @@ def part_08(source):
 
 def part_09(first, second):
     return itertools.product(first, second)
+
+
+def part_10():
+    integers = itertools.islice(itertools.count(0, 1), 10)
+    candidate = list(itertools.accumulate(integers))
+    print(candidate)

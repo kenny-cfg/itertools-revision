@@ -1,9 +1,8 @@
 import unittest
 
-from answers import part_02, part_03, part_04, part_05, part_06, part_07, part_08, part_09
+from answers import part_02, part_03, part_04, part_05, part_06, part_07, part_08, part_09, part_10
 
 """
-9. Use `itertools.product` to compute the Cartesian product of two lists: [1, 2] and ['a', 'b'].
 10. Create a generator that generates the Fibonacci sequence up to the 10th element using `itertools.accumulate`.
 11. Use `itertools.compress` to filter elements from a list based on the corresponding boolean values in another list.
 12. Write a function that returns the nth element of the Fibonacci sequence using `itertools.islice`.
@@ -63,6 +62,16 @@ class TestAnswers(unittest.TestCase):
         result = part_09([1, 2], ['a', 'b'])
 
         self.assertEqual(list(result), [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')])
+
+    def test_part_10(self):
+        result = part_10()
+        # See this:
+        # https://github.com/hanif-ali/til/blob/master/python/fibonacci-itertools.md
+
+        self.assertEqual(list(result), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
+
+# 10. Create a generator that generates the Fibonacci sequence up to the
+# 10th element using `itertools.accumulate`.
 
 if __name__ == '__main__':
     unittest.main()
