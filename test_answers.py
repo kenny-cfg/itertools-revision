@@ -1,6 +1,6 @@
 import unittest
 
-from answers import part_02, part_03, part_04, part_05, part_06
+from answers import part_02, part_03, part_04, part_05, part_06, part_07
 
 """
 7. Generate all permutations of the characters in the string 'abc'.
@@ -45,8 +45,19 @@ class TestAnswers(unittest.TestCase):
         result = part_06([1, 2, 3], [4], 20)
 
         self.assertEqual(list(result), [(1, 4), (2, 20), (3, 20)])
-# 6. Use `itertools.zip_longest` to combine two lists of different lengths,
-# filling missing values with a default value.
+
+    def test_part_07(self):
+        result = part_07('abc')
+
+        self.assertEqual(list(result), [('a', 'b', 'c'),
+                                        ('a', 'c', 'b'),
+                                        ('b', 'a', 'c'),
+                                        ('b', 'c', 'a'),
+                                        ('c', 'a', 'b'),
+                                        ('c', 'b', 'a')])
+
+
+# 7. Generate all permutations of the characters in the string 'abc'.
 
 
 if __name__ == '__main__':
