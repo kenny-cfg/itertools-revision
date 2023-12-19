@@ -1,10 +1,8 @@
 import unittest
 
-from answers import part_02, part_03, part_04, part_05, part_06, part_07
+from answers import part_02, part_03, part_04, part_05, part_06, part_07, part_08
 
 """
-7. Generate all permutations of the characters in the string 'abc'.
-8. Generate all combinations of 2 elements from the list [1, 2, 3, 4].
 9. Use `itertools.product` to compute the Cartesian product of two lists: [1, 2] and ['a', 'b'].
 10. Create a generator that generates the Fibonacci sequence up to the 10th element using `itertools.accumulate`.
 11. Use `itertools.compress` to filter elements from a list based on the corresponding boolean values in another list.
@@ -56,8 +54,10 @@ class TestAnswers(unittest.TestCase):
                                         ('c', 'a', 'b'),
                                         ('c', 'b', 'a')])
 
+    def test_part_08(self):
+        result = part_08([1, 2, 3, 4])
 
-# 7. Generate all permutations of the characters in the string 'abc'.
+        self.assertEqual(list(result), [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)])
 
 
 if __name__ == '__main__':

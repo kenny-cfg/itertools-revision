@@ -22,5 +22,10 @@ def part_05(first, second):
 def part_06(first, second, default_value):
     return itertools.zip_longest(first, second, fillvalue=default_value)
 
+
 def part_07(source):
     return itertools.permutations(source)
+
+def part_08(source):
+    return itertools.combinations(source, 2)
+
