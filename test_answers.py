@@ -1,9 +1,8 @@
 import unittest
 
-from answers import part_02, part_03, part_04, part_05
+from answers import part_02, part_03, part_04, part_05, part_06
 
 """
-6. Use `itertools.zip_longest` to combine two lists of different lengths, filling missing values with a default value.
 7. Generate all permutations of the characters in the string 'abc'.
 8. Generate all combinations of 2 elements from the list [1, 2, 3, 4].
 9. Use `itertools.product` to compute the Cartesian product of two lists: [1, 2] and ['a', 'b'].
@@ -42,6 +41,12 @@ class TestAnswers(unittest.TestCase):
 
         self.assertEqual(list(result), [1, 2, 3, 4, 5, 6])
 
+    def test_part_06(self):
+        result = part_06([1, 2, 3], [4], 20)
+
+        self.assertEqual(list(result), [(1, 4), (2, 20), (3, 20)])
+# 6. Use `itertools.zip_longest` to combine two lists of different lengths,
+# filling missing values with a default value.
 
 
 if __name__ == '__main__':

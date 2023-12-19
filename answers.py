@@ -17,3 +17,7 @@ def part_04():
 
 def part_05(first, second):
     return itertools.chain(first, second)
+
+
+def part_06(first, second, default_value):
+    return itertools.zip_longest(first, second, fillvalue=default_value)
